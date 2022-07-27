@@ -15,7 +15,6 @@ const BuyNavSection = ({ product }) => {
       }}
       style={{
         display: "flex",
-        // justifyContent: "space-evenly",
         alignItems: "center",
       }}
     >

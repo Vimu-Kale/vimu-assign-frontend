@@ -37,7 +37,6 @@ const ProductAboutNav = () => {
         style={{
           position: "sticky",
           top: "44px",
-          // height: "6rem",
           height: "101px",
           zIndex: 1200,
           backgroundColor: "white",

@@ -17,7 +17,6 @@ const ProductDesc = ({ product }) => {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
-          // width: { md: "567px" },
           textAlign: "justify",
           paddingLeft: { xs: "15px", md: "3rem" },
           paddingRight: { xs: "15px", md: "1rem" },

@@ -22,12 +22,9 @@ const Counter = () => {
           flexDirection: "row",
           alignItems: "center",
           backgroundColor: "#F5F7FF",
-          // height: "2rem",
-          // width: "3.5rem",
           height: "50px",
           width: "70px",
           borderRadius: "6px",
-          // padding: "5px",
         }}
       >
         <Typography
