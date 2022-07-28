@@ -2,13 +2,16 @@
 import axios from "axios";
 import React, { useState } from "react";
 import LoadingButton from "@mui/lab/LoadingButton";
+import * as API_URLS from "../../services/urls";
 
 const CheckoutButton = ({ cartItems }) => {
   const [loading, setLoading] = useState(false);
+
+  //HITTING THE CREATE CHECKOUT SESSION ENDPOINT ALONG WITH PRODUCT DATA
   const handleOnCheckout = () => {
     setLoading(true);
     axios
-      .post("http://localhost:3001/api/stripe/create-checkout-session", {
+      .post(API_URLS.CHECKOUT_SESSION_URL, {
         cartItems,
       })
       .then((res) => {
@@ -22,6 +25,7 @@ const CheckoutButton = ({ cartItems }) => {
         setLoading(false);
       });
   };
+
   return (
     <div>
       <LoadingButton

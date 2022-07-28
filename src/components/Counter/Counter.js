@@ -4,10 +4,14 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "../../slices/cart/cartSlice";
+
+// CUSTOM QTY COUNTER
+
 const Counter = () => {
   const dispatch = useDispatch();
   const { items } = useSelector((state) => state.cart);
   const [qty, setQty] = useState(null);
+
   useEffect(() => {
     setQty(items[0].qty);
   }, [items]);

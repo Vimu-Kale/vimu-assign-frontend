@@ -9,6 +9,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import IconButton from "@mui/material/IconButton";
 
+// STYLING THE BOX COMPONENT IN MODAL
 const style = {
   position: "absolute",
   top: "50%",
@@ -24,6 +25,7 @@ const style = {
   outline: "none",
 };
 
+//DIALOG BOX TO DISPLAY APPROPRIATE INFO. ON SUCCESS OR CANCELLED TRANSACTION
 const DialogueBox = ({ open, setOpen, dialogType }) => {
   return (
     <Modal
@@ -47,6 +49,7 @@ const DialogueBox = ({ open, setOpen, dialogType }) => {
               textAlign: "center",
             }}
           >
+            {/* CLOSE ICON */}
             <div
               style={{
                 alignSelf: "end",
@@ -56,7 +59,7 @@ const DialogueBox = ({ open, setOpen, dialogType }) => {
               }}
             >
               <IconButton onClick={() => setOpen(false)}>
-                <CloseIcon />
+                <CloseIcon sx={{ color: "#000000" }} />
               </IconButton>
             </div>
             <br />

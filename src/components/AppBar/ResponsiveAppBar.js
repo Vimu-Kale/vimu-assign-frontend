@@ -8,12 +8,14 @@ import {
   Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-// import logo from "../../assets/images/logo.png";
 import logo from "../../assets/images/logo.svg";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Fade from "@mui/material/Fade";
 import { useWindowSize } from "../../hooks/useWindowSize";
 
+// HIDES THE APP BAR ON SCROLL USING THE useScrollTrigger()
+// ======================================================
+// [DOES NOT REQUIRE ]
 function HideOnScroll(props) {
   const { children } = props;
   const size = useWindowSize();
@@ -28,7 +30,9 @@ function HideOnScroll(props) {
     <>{children}</>
   );
 }
+// =======================================================
 
+// RENDERING MULTIPLE MENUITEMS IN APPBAR MENUE
 export const MenuItems = ({ navLink }) => {
   return (
     <>
@@ -85,6 +89,8 @@ const ResponsiveAppBar = (props) => {
                 pl: { xs: "1rem", md: 0 },
               }}
             />
+
+            {/* RENDERING APPBAR MENU ITEMS */}
             {menus.map((element, i) => {
               return <MenuItems navLink={element} key={i} />;
             })}

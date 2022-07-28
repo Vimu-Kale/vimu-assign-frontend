@@ -14,12 +14,15 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    // RETURNS THE QUERY STRING PART OF URL
     const query = new URLSearchParams(window.location.search);
 
+    // IF "success" PARAM IN QUERY STRING PART
     if (query.get("success")) {
       dispatch(resetCart());
       setDialogType("success");
       setOpen(true);
+
       query.delete("success");
       navigate(
         {
@@ -29,6 +32,7 @@ const Home = () => {
       );
     }
 
+    // IF "cancelled" PARAM IN QUERY STRING PART
     if (query.get("cancelled")) {
       setDialogType("cancelled");
       setOpen(true);
