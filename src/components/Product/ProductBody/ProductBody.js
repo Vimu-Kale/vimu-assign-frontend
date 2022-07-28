@@ -33,9 +33,10 @@ const ProductBody = () => {
               bottom: 0,
               width: "9600px",
               position: "absolute",
-              background: "#F5F7FF",
+              background: { xs: "#ffffff", md: "#F5F7FF" },
               right: "100%",
             },
+            paddingBottom: { xs: 0, md: "5rem" },
           }}
         >
           <ProductDesc product={Product} />

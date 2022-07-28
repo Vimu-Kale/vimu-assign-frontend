@@ -6,6 +6,8 @@ const initialState = {
       id: 1,
       name: "New Apple AirPods (3rd Generation)",
       price: "299",
+      Image:
+        "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MME73_AV3?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1632861336000",
       qty: "1",
     },
   ],

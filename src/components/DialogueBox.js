@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import confirm from "../assets/images/confirm.png";
+import confirm from "../assets/images/confirm1.svg";
 import cancel from "../assets/images/cancel.png";
 import CloseIcon from "@mui/icons-material/Close";
 import Backdrop from "@mui/material/Backdrop";
@@ -17,7 +17,7 @@ const style = {
   width: "70%",
   maxWidth: 600,
   minWidth: 270,
-  bgcolor: "white",
+  bgcolor: "#F5F5F5",
   borderRadius: "7px",
   boxShadow: 24,
   padding: 4,
@@ -60,13 +60,14 @@ const DialogueBox = ({ open, setOpen, dialogType }) => {
               </IconButton>
             </div>
             <br />
-            <img
+            <Box
+              component="img"
               src={dialogType === "success" ? confirm : cancel}
               alt="success tickmark"
-              style={{
+              sx={{
                 verticalAlign: "middle",
-                width: "4rem",
-                height: "4rem",
+                height: { xs: "60px", sm: "80px", md: "100px" },
+                width: { xs: "60px", sm: "80px", md: "100px" },
                 borderRadius: "50%",
               }}
             />
@@ -74,8 +75,8 @@ const DialogueBox = ({ open, setOpen, dialogType }) => {
             <Typography
               style={{
                 fontFamily: "Poppins",
-                fontWeight: "bolder",
-                fontSize: "large",
+                fontWeight: "700",
+                fontSize: { xs: "18px", md: "24px" },
               }}
             >
               {dialogType === "success"
@@ -86,6 +87,8 @@ const DialogueBox = ({ open, setOpen, dialogType }) => {
             <Typography
               style={{
                 fontFamily: "Poppins",
+                fontWeight: "300",
+                fontSize: { xs: "14px", md: "18px" },
               }}
             >
               {dialogType === "success"
@@ -97,6 +100,8 @@ const DialogueBox = ({ open, setOpen, dialogType }) => {
               <Typography
                 style={{
                   fontFamily: "Poppins",
+                  fontWeight: "300",
+                  fontSize: { xs: "14px", md: "18px" },
                   maxWidth: "25rem",
                   paddingBottom: "1rem",
                 }}

@@ -8,7 +8,8 @@ import {
   Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import logo from "../../assets/images/logo.png";
+// import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Fade from "@mui/material/Fade";
 import { useWindowSize } from "../../hooks/useWindowSize";
@@ -81,7 +82,7 @@ const ResponsiveAppBar = (props) => {
                 height: { xs: "23.56px", sm: "40.05px" },
                 width: { xs: "19.69px", sm: "33.47px" },
                 paddingRight: "2rem",
-                pl: { xs: "1rem" },
+                pl: { xs: "1rem", md: 0 },
               }}
             />
             {menus.map((element, i) => {
